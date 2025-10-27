@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Vijay Sinha Portfolio">
+  <title>Vijay Sinha Portfolio</title>
+  <link rel="author" href="mailto:vijay@example.com">
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+    }
+
+    section {
+      border: 1px solid #ccc;
+      border-width: 2px;
+    }
+
+    main {
+      border: 2px solid #999;
+    }
+
+    project-card {
+      display: block;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      margin-block: 1rem;
+    }
+    project-card[type='main'] {border-width: 2px; margin-top: 1.5rem; font-weight: 600; font-size: 1.1rem;}
+    project-card[type='side'] {border-style: dashed; margin-inline-start: 1rem; font-weight: 400; font-size: 1rem;}
+  </style>
+  <script>
+    class HelloWorld extends HTMLElement {
+      constructor() {
+        super();
+        console.log("Hello world!");
+      }
+    }
+    customElements.define('hello-world', HelloWorld);
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1><strong>Vijay Sinha</strong> <em>Portfolio</em></h1>
+    <nav>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <hello-world></hello-world>
+    <section id="projects">
+      <h2>Projects</h2>
+      <project-card type="main">
+        <article>
+          <h3>Project 1</h3>
+          <p>
+            Designed an <b>object-oriented</b> application using Java. 
+            The project supports user login.
+          </p>
+          <p>
+            Progress:
+            <progress value="70" max="100">70%</progress>
+          </p>
+        </article>
+      </project-card>
+      <project-card type="side">
+        <article>
+          <h3>Project 2</h3>
+          <p><i>Full-stack</i> CRUD app built using React.</p>
+          <div>
+            <svg width="50" height="50">
+              <circle cx="25" cy="25" r="20"></circle>
+            </svg>
+          </div>
+        </article>
+      </project-card>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <article>
+        <h3>Software Intern</h3>
+        <p>
+          Worked on REST APIs. 
+          Used tools like <span>Node.js</span>, <span>Python</span>, and React.<br>
+          Created API endpoints and Frontend components.
+        </p>
+        <ol>
+          <li>Developed backend routes</li>
+          <li>Integrated MongoDB models</li>
+        </ol>
+      </article>
+      <iframe srcdoc="<!DOCTYPE html><html><body><p>iframe content.</p></body></html>"></iframe>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>React</li>
+      </ul>
+      <p><strong>Other:</strong> MySQL, Git, Linux, Express.js</p>
+      <button>View Certifications</button>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Get in Touch</legend>
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name"><br><br>
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email"><br><br>
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" rows="4" cols="40"></textarea><br><br>
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+
+      <dialog open>
+        <p>Thank you for visiting my portfolio!</p>
+        <form method="dialog">
+          <button>Close</button>
+        </form>
+      </dialog>
+
+      <noscript>
+        Enable JavaScript to use the contact form.
+      </noscript>
+    </section>
+  </main>
+
+  <footer>
+    <p>Vijay Sinha | <a href="#top">Back to Top</a></p>
+  </footer>
+
+</body>
+</html>
