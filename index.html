@@ -4,142 +4,154 @@
   <meta charset="UTF-8">
   <meta name="description" content="Vijay Sinha Portfolio">
   <title>Vijay Sinha Portfolio</title>
-  <link rel="author" href="mailto:vijay@example.com">
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-    }
-
-    section {
-      border: 1px solid #ccc;
-      border-width: 2px;
-    }
-
-    main {
-      border: 2px solid #999;
-    }
-
-    project-card {
-      display: block;
-      border: 1px solid #ccc;
-      padding: 1rem;
-      margin-block: 1rem;
-    }
-    project-card[type='main'] {border-width: 2px; margin-top: 1.5rem; font-weight: 600; font-size: 1.1rem;}
-    project-card[type='side'] {border-style: dashed; margin-inline-start: 1rem; font-weight: 400; font-size: 1rem;}
-  </style>
-  <script>
-    class HelloWorld extends HTMLElement {
-      constructor() {
-        super();
-        console.log("Hello world!");
-      }
-    }
-    customElements.define('hello-world', HelloWorld);
-  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/spacecraft.ico" type="image/x-icon">
 </head>
 
 <body>
   <header>
-    <h1><strong>Vijay Sinha</strong> <em>Portfolio</em></h1>
-    <nav>
-      <ul>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <a href="#home" class="header-name">Vijay <span>Sinha</span></a>
+    
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" id="menu-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 80">
+        <rect width="100" height="15" fill="white" rx="7.5"></rect>
+        <rect y="32.5" width="100" height="15" fill="white" rx="7.5"></rect>
+        <rect y="65" width="100" height="15" fill="white" rx="7.5"></rect>
+      </svg>
+    </label>
 
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="images/vijayresume.pdf" class="header-btn" target="_blank">Resume</a>
+  </header>
+  
   <main>
-    <hello-world></hello-world>
-    <section id="projects">
-      <h2>Projects</h2>
-      <project-card type="main">
-        <article>
-          <h3>Project 1</h3>
-          <p>
-            Designed an <b>object-oriented</b> application using Java. 
-            The project supports user login.
-          </p>
-          <p>
-            Progress:
-            <progress value="70" max="100">70%</progress>
-          </p>
-        </article>
-      </project-card>
-      <project-card type="side">
-        <article>
-          <h3>Project 2</h3>
-          <p><i>Full-stack</i> CRUD app built using React.</p>
-          <div>
-            <svg width="50" height="50">
-              <circle cx="25" cy="25" r="20"></circle>
+    <section id="home">
+      <article>
+        <h1>Vijay Sinha</h1> 
+        <h3>CS @ <a href="https://ucsd.edu" target="_blank" class="university">UC San Diego</a></h3>
+
+        <aside class="social-icons">
+          <a href="https://github.com/coderfreeze" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.38 7.86 10.9c.58.1.79-.25.79-.56c0-.27-.01-1.05-.02-2.04c-3.2.69-3.88-1.54-3.88-1.54c-.53-1.37-1.28-1.73-1.28-1.73c-1.04-.73.08-.72.08-.72c1.15.08 1.76 1.18 1.76 1.18c1.04 1.78 2.73 1.26 3.39.96c.11-.74.41-1.26.75-1.56c-2.57-.29-5.27-1.28-5.27-5.75c0-1.27.46-2.3 1.21-3.12c-.12-.29-.53-1.46.12-3.06c0 0 .98-.31 3.18 1.2a11 11 0 0 1 5.77 0c2.2-1.51 3.18-1.2 3.18-1.2c.65 1.6.24 2.77.12 3.06c.76.82 1.21 1.85 1.21 3.12c0 4.48-2.71 5.46-5.29 5.74c.42.36.79 1.07.79 2.15c0 1.58-.01 2.85-.01 3.23c0 .31.21.67.79.56A11.5 11.5 0 0 0 23.5 12A11.5 11.5 0 0 0 12 .5Z"/>
             </svg>
-          </div>
-        </article>
-      </project-card>
+          </a>
+          <a href="https://linkedin.com/in/vijay-09-sinha" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0zM7.119 20.452H3.557V9h3.562v11.452zM5.337 7.433a2.07 2.07 0 1 1 .007-4.139 2.07 2.07 0 0 1-.007 4.139zM20.447 20.452h-3.554V14.83c0-1.339-.027-3.064-1.867-3.064-1.868 0-2.154 1.459-2.154 2.965v5.721H9.317V9h3.414v1.561h.049c.476-.9 1.637-1.848 3.37-1.848 3.604 0 4.268 2.372 4.268 5.455v6.284z"/>
+            </svg>
+          </a>
+          <a href="mailto:visinha@ucsd.edu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 3.5-8 5l-8-5V6l8 5l8-5v1.5Z"/>
+            </svg>
+          </a>
+        </aside>
+
+        <aside class="btn-group">
+          <a href="images/vijayresume.pdf" class="btn" target="_blank">Resume</a>
+        </aside>
+      </article>
+
+      <figure>
+        <img src="images/vijay.jpg" alt="Image of Vijay Sinha">
+      </figure>
     </section>
 
     <section id="experience">
-      <h2>Experience</h2>
-      <article>
-        <h3>Software Intern</h3>
-        <p>
-          Worked on REST APIs. 
-          Used tools like <span>Node.js</span>, <span>Python</span>, and React.<br>
-          Created API endpoints and Frontend components.
-        </p>
-        <ol>
-          <li>Developed backend routes</li>
-          <li>Integrated MongoDB models</li>
-        </ol>
-      </article>
-      <iframe srcdoc="<!DOCTYPE html><html><body><p>iframe content.</p></body></html>"></iframe>
-    </section>
+      <h2 class="heading">Experience</h2>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Java</li>
-        <li>Python</li>
-        <li>React</li>
-      </ul>
-      <p><strong>Other:</strong> MySQL, Git, Linux, Express.js</p>
-      <button>View Certifications</button>
+      <article class="experience-container">
+        <div class="experience-box">
+          <div class="experience-info">
+            <i>AV</i>
+            <h4>Software Engineer Intern</h4>
+            <p>Contributed to system development on Linux, collaborating 
+              closely with engineers to debug, validate, and improve 
+              system reliability.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+    
+    <section id="projects">
+      <h2 class="heading">Projects</h2>
+
+      <article class="projects-box">
+        <div class="project-card">
+          <img src="images/chat_project.png" alt="Chat Server Project">
+          <h3>Chat Server</h3>
+          <p>
+            Developed a high-performance chat server in C 
+            with custom TCP/IP sockets and persistent storage 
+            optimized for concurrent requests.
+          </p>
+          <ul class="project-skills">
+            <li class="skill-item">C/C++</li>
+            <li class="skill-item">GDB</li>
+            <li class="skill-item">Vim</li>
+            <li class="skill-item">Systems Programming</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <img src="images/stock-app.png" alt="Dashboard of Stock Portfolio Project">
+          <h3>Stock Portfolio Project</h3>
+          <p>
+            Built a comprehensive MERN stack app that seamlessly 
+            combined dynamic stock searches, secure authentication, 
+            and real-time data visualization.
+          </p>
+          <ul class="project-skills">
+            <li class="skill-item">JavaScript</li>
+            <li class="skill-item">React</li>
+            <li class="skill-item">MongoDB</li>
+            <li class="skill-item">Express</li>
+            <li class="skill-item">Node</li>
+            <li class="skill-item">Tailwind</li>
+          </ul>
+        </div>
+      </article>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <form action="#" method="get">
-        <fieldset>
-          <legend>Get in Touch</legend>
-          <label for="name">Name:</label><br>
-          <input type="text" id="name" name="name"><br><br>
-          <label for="email">Email:</label><br>
-          <input type="email" id="email" name="email"><br><br>
-          <label for="message">Message:</label><br>
-          <textarea id="message" name="message" rows="4" cols="40"></textarea><br><br>
-          <button type="submit">Submit</button>
+      <h2 class="heading">Contact <span>Me</span></h2>
+      <form action="#">
+        <fieldset class="input-group">
+          <input type="email" placeholder="Email" required>
+          <textarea name="" id="" placeholder="Your Message" cols="30" rows="10" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
         </fieldset>
       </form>
-
-      <dialog open>
-        <p>Thank you for visiting my portfolio!</p>
-        <form method="dialog">
-          <button>Close</button>
-        </form>
-      </dialog>
-
-      <noscript>
-        Enable JavaScript to use the contact form.
-      </noscript>
     </section>
   </main>
 
   <footer>
-    <p>Vijay Sinha | <a href="#top">Back to Top</a></p>
+    <aside class="social-icons">
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.38 7.86 10.9c.58.1.79-.25.79-.56c0-.27-.01-1.05-.02-2.04c-3.2.69-3.88-1.54-3.88-1.54c-.53-1.37-1.28-1.73-1.28-1.73c-1.04-.73.08-.72.08-.72c1.15.08 1.76 1.18 1.76 1.18c1.04 1.78 2.73 1.26 3.39.96c.11-.74.41-1.26.75-1.56c-2.57-.29-5.27-1.28-5.27-5.75c0-1.27.46-2.3 1.21-3.12c-.12-.29-.53-1.46.12-3.06c0 0 .98-.31 3.18 1.2a11 11 0 0 1 5.77 0c2.2-1.51 3.18-1.2 3.18-1.2c.65 1.6.24 2.77.12 3.06c.76.82 1.21 1.85 1.21 3.12c0 4.48-2.71 5.46-5.29 5.74c.42.36.79 1.07.79 2.15c0 1.58-.01 2.85-.01 3.23c0 .31.21.67.79.56A11.5 11.5 0 0 0 23.5 12A11.5 11.5 0 0 0 12 .5Z"/>
+        </svg>
+      </a>
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0zM7.119 20.452H3.557V9h3.562v11.452zM5.337 7.433a2.07 2.07 0 1 1 .007-4.139 2.07 2.07 0 0 1-.007 4.139zM20.447 20.452h-3.554V14.83c0-1.339-.027-3.064-1.867-3.064-1.868 0-2.154 1.459-2.154 2.965v5.721H9.317V9h3.414v1.561h.049c.476-.9 1.637-1.848 3.37-1.848 3.604 0 4.268 2.372 4.268 5.455v6.284z"/>
+        </svg>
+      </a>
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 3.5-8 5l-8-5V6l8 5l8-5v1.5Z"/>
+        </svg>
+      </a>
+    </aside>
   </footer>
 
 </body>
